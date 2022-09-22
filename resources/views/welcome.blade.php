@@ -442,6 +442,12 @@
 
 
 @section('script')
+<script src="https://cdn.ckeditor.com/4.19.0/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace('editor1');
+</script>
+
+
 <script>
     function openForm(){
         $('#postModal').modal('show');
@@ -450,9 +456,10 @@
 
 <script>
     $(document).ready(function() {
-       
-
+        $('#otherEditor').hide();
+            $('#blogEditor').hide();
     });
+
     $('#postType').on('change',function(){
         var postType = $('#postType').val();
         if(postType == 'post'){
@@ -469,10 +476,7 @@
             $('#postEditor').hide();
             $('#blogEditor').hide();
             $('#otherEditor').show();
-
-
         }
-
     });
 </script>
 
