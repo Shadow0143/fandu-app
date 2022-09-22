@@ -335,7 +335,7 @@
     <div class="modal fade pw_modal" id="postModal" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
-                <form action="" method="post" enctype="multipart/form-data">
+                <form action="{{route('createPost')}}" method="post" enctype="multipart/form-data">
                     @csrf
                     <div class="modal-header">
                         <h4 class="modal-title">Create Post</h4>

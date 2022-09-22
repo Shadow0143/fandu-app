@@ -32,17 +32,18 @@ class PostController extends Controller
         } else {
             $post->post_content = $request->post;
         }
-        $tag = json_encode($request->tags, true);
-        $categ = json_encode($request->categories, true);
+        $tag = implode(" , ", $request->tags);
+        $categ = implode(" , ", $request->categories);
         $post->tag = $tag;
         $post->category = $categ;
+        $post->status = '1';
         $post->save();
 
         $postImagearry = $request->post_image;
         if (!empty($postImagearry)) {
             for ($k = 0; $k < count($postImagearry); $k++) {
                 $input['imagename'] = 'PostImage-' . Auth::user()->id . '-' . rand(000, 5000) . '.' . $postImagearry[$k]->getClientOriginalExtension();
-                $destinationPath_selected = public_path('/uploads');
+                $destinationPath_selected = public_path('/post_images');
                 $img2 = Image::make($postImagearry[$k]->getRealPath());
                 $img2->resize(1024, 768, function ($constraint2) {
                     $constraint2->aspectRatio();

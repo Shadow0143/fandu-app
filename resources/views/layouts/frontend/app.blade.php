@@ -36,7 +36,6 @@
     @include('layouts.frontend.footer')
 
 
-
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="{{asset('js/bootstrap.js')}}"></script>
     <script src="{{asset('js/slick.js')}}"></script>
