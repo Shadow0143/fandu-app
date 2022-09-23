@@ -293,27 +293,47 @@
                             <h2><span>100%</span> Customer Satisfaction, Guaranteed.
                             </h2>
 
-                            <div class="testimonblock99">
-                                <figure><img src="{{asset('images/profpic56.jpg')}}"></figure>
-                                <div class="testmoinfo55">
-                                    <h3>Name of Client</h3>
-                                    <span>Designation</span>
-                                    <p>
-                                        Before Fandu.me, the website template options I found on the internet were
-                                        not
-                                        really suitable for me. But now I have a personal website that I am finally
-                                        happy with.
-                                    </p>
+                            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+
+                                    @foreach ($testimonials as $key=>$val )
+                                    <div class="carousel-item @if($key==0) active @endif">
+                                        <div class="testimonblock99">
+                                            <figure><img src="{{asset('auther_images')}}/{{$val->auther_image}}">
+                                            </figure>
+                                            <div class="testmoinfo55">
+                                                <h3>{{$val->auther_name}}</h3>
+                                                <span>{{$val->auther_designation}}</span>
+                                                <p>
+                                                    {!! substr($val->quotes, 0,80) !!} ....
+                                                </p>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="readmorebox">
+                                            <a href="{{route('testimonialDetail',['slug'=>$val->auther_name,'id'=>$val->id])}}"
+                                                class="readmr568">
+                                                <img src="{{asset('images/arrowmoreblue02.png')}}"> READ MORE
+                                            </a>
+                                        </div>
+                                    </div>
+                                    @endforeach
+
+
 
                                 </div>
-                            </div>
-
-                            <div class="readmorebox">
-                                <a href="#" class="readmr568">
-                                    <img src="{{asset('images/arrowmoreblue02.png')}}"> READ MORE
+                                <a class="carousel-control-prev" href="#carouselExampleControls" role="button"
+                                    data-slide="prev">
+                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="carousel-control-next" href="#carouselExampleControls" role="button"
+                                    data-slide="next">
+                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
                                 </a>
                             </div>
-
                         </div>
 
 

@@ -30,3 +30,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::post('/submit-post', [App\Http\Controllers\PostController::class, 'createPost'])->name('createPost');
 Route::get('/post-detail/{slug}/{id}', [App\Http\Controllers\PostController::class, 'postDetail'])->name('postDetail');
 Route::post('/submit-testimonial', [App\Http\Controllers\PostController::class, 'submitTestimonial'])->name('submitTestimonial');
+Route::get('/testimonial-detail/{slug}/{id}', [App\Http\Controllers\PostController::class, 'testimonialDetail'])->name('testimonialDetail');

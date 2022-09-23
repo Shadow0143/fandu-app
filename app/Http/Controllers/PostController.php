@@ -74,7 +74,8 @@ class PostController extends Controller
     {
         $post = Post::where('id', $id)->first();
         $postImages = PostImage::where('post_id', $id)->get();
-        return view('postDetail', compact('post', 'postImages'));
+        $testimonials = Testimonial::orderBy('id', 'desc')->get();
+        return view('postDetail', compact('post', 'postImages', 'testimonials'));
     }
 
 
@@ -97,5 +98,13 @@ class PostController extends Controller
         $testimonial->save();
         Alert::success('Success', 'Added');
         return back();
+    }
+
+
+    public function testimonialDetail($slug, $id)
+    {
+        $testimonial = Testimonial::where('id', $id)->first();
+        $testimonials = Testimonial::orderBy('id', 'desc')->get();
+        return view('testimonialDetails', compact('testimonial', 'testimonials'));
     }
 }
