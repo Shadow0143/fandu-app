@@ -31,3 +31,7 @@ Route::post('/submit-post', [App\Http\Controllers\PostController::class, 'create
 Route::get('/post-detail/{slug}/{id}', [App\Http\Controllers\PostController::class, 'postDetail'])->name('postDetail');
 Route::post('/submit-testimonial', [App\Http\Controllers\PostController::class, 'submitTestimonial'])->name('submitTestimonial');
 Route::get('/testimonial-detail/{slug}/{id}', [App\Http\Controllers\PostController::class, 'testimonialDetail'])->name('testimonialDetail');
+Route::post('/submit-contents', [App\Http\Controllers\PostController::class, 'submitContents'])->name('submitContents');
+Route::get('/read-feature/{slug}', [App\Http\Controllers\PostController::class, 'viewFeatures'])->name('viewFeatures');
+Route::get('/read-about-us', [App\Http\Controllers\PostController::class, 'readAboutUs'])->name('readAboutUs');
+Route::get('/why-me', [App\Http\Controllers\PostController::class, 'whyMe'])->name('whyMe');

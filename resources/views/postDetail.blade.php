@@ -85,10 +85,10 @@
                                     balanced website for your personal information and the content you create.
                                 </p>
 
-                                <div class="youcan">Now you can…</div>
+                                <div class="youcan">About Fandu</div>
 
                                 <div class="readmorebox">
-                                    <a href="#" class="readmr568">
+                                    <a href="{{route('readAboutUs')}}" class="readmr568">
                                         <img src="{{asset('images/arrowmore02.png')}}"> READ MORE
                                     </a>
                                 </div>
@@ -102,51 +102,47 @@
                                 <li>
                                     <img src="{{asset('images/flistimg/fl01.png')}}">
                                     <p>
-                                        Creates the perfect balance between personal branding information and all
-                                        the
-                                        content that you create on a regular basis.
+                                        Hassle-free & Seamless Interface
+
                                     </p>
                                 </li>
                                 <li>
                                     <img src="{{asset('images/flistimg/fl02.png')}}">
                                     <p>
-                                        Creates the perfect balance between personal branding information and all
-                                        the
-                                        content that you create on a regular basis.
+                                        A single Repository of all your Content
                                     </p>
                                 </li>
                                 <li>
                                     <img src="{{asset('images/flistimg/fl03.png')}}">
                                     <p>
-                                        Creates the perfect balance between personal branding information and all
-                                        the
-                                        content that you create on a regular basis.
+                                        Effortless Interaction With Your Audience
+
                                     </p>
                                 </li>
 
                                 <li>
                                     <img src="{{asset('images/flistimg/fl04.png')}}">
                                     <p>
-                                        Creates the perfect balance between personal branding information and all
-                                        the
-                                        content that you create on a regular basis.
+                                        Keep Your Website Fresh & Interesting
                                     </p>
                                 </li>
                                 <li>
                                     <img src="{{asset('images/flistimg/fl05.png')}}">
                                     <p>
-                                        Creates the perfect balance between personal branding information and all
-                                        the
-                                        content that you create on a regular basis.
+                                        Affordable & Single Subscription Plan
                                     </p>
                                 </li>
 
                                 <li>
                                     <img src="{{asset('images/flistimg/fl06.png')}}">
                                     <p>
-                                        Creates the perfect balance between personal branding information and all
-                                        the
-                                        content that you create on a regular basis.
+                                        Grow Your Personal Brand on Social Media
+                                    </p>
+                                </li>
+                                <li>
+                                    <img src="{{asset('images/flistimg/fl03.png')}}">
+                                    <p>
+                                        Search Engine Friendly Personal Website
                                     </p>
                                 </li>
 
@@ -156,7 +152,7 @@
 
 
                         <div class="togethersec15">
-                            <a href="#">
+                            <a href="{{route('whyMe')}}">
                                 <span>
                                     Let's think
                                     together.
@@ -180,78 +176,70 @@
                                 top 8 reasons why you should have your own personal website.
                             </p>
 
+
                             <ul class="servlist58">
                                 <li>
                                     <img src="{{asset('images/icon/icon01.png')}}">
                                     <p>
                                         Create a unique identity & digital presence.
+
                                     </p>
                                 </li>
 
                                 <li>
                                     <img src="{{asset('images/icon/icon02.png')}}">
                                     <p>
-                                        Create a unique identity & digital presence.
+                                        Take control of your personal branding.
+
                                     </p>
                                 </li>
 
                                 <li>
                                     <img src="{{asset('images/icon/icon03.png')}}">
                                     <p>
-                                        Create a unique identity & digital presence.
+                                        Showcase your talents & achievements.
+
                                     </p>
                                 </li>
 
                                 <li>
                                     <img src="{{asset('images/icon/icon04.png')}}">
                                     <p>
-                                        Create a unique identity & digital presence.
+                                        Connect better & faster with your audience.
+
                                     </p>
                                 </li>
 
                                 <li>
                                     <img src="{{asset('images/icon/icon05.png')}}">
                                     <p>
-                                        Create a unique identity & digital presence.
+                                        Provide all the information in one place.
+
                                     </p>
                                 </li>
 
                                 <li>
                                     <img src="{{asset('images/icon/icon06.png')}}">
                                     <p>
-                                        Create a unique identity & digital presence.
+                                        Take advantage of SEO, SEM, and online ads.
                                     </p>
                                 </li>
 
                                 <li>
                                     <img src="{{asset('images/icon/icon07.png')}}">
                                     <p>
-                                        Create a unique identity & digital presence.
+                                        Share insights and updates easily & quickly.
                                     </p>
                                 </li>
 
                                 <li>
                                     <img src="{{asset('images/icon/icon08.png')}}">
                                     <p>
-                                        Create a unique identity & digital presence.
+                                        Stand out from the crowd.
                                     </p>
                                 </li>
 
 
-                                <li>
-                                    <img src="{{asset('images/icon/icon08.png')}}">
-                                    <p>
-                                        Create a unique identity & digital presence.
-                                    </p>
-                                </li>
-
-
-                                <li>
-                                    <img src="{{asset('images/icon/icon08.png')}}">
-                                    <p>
-                                        Create a unique identity & digital presence.
-                                    </p>
-                                </li>
                             </ul>
 
                         </div>
@@ -260,27 +248,17 @@
 
                         <div class="featuresec56">
                             <h2>
-                                Must have Features <br> <span>you need to manage</span> <span> your personal Website
-                                </span>
+                                {{$content->title}}
                             </h2>
-
                             <p>
-                                Fandu.me takes personal website development to the next level by catering to your
-                                needs
-                                as well as the needs of your audiences.
+                                {{$content->subtitle}}
                             </p>
-
-                            <ul class="featurelist255">
-                                <li>1. DIY Tool with the Perfect Design.</li>
-                                <li>2. Simple, Easy-to-use User Interface.</li>
-                                <li>3. Combine Static Data with New Content. </li>
-                                <li>4. Avail Options Like SSL, Live Chat.</li>
-                                <li>5. Embed Blogs, Social Media, & More.</li>
-                                <li>6. Maintain & Upgrade as Required.</li>
-                            </ul>
+                            <div>
+                                {!! $content->description !!}
+                            </div>
 
                             <div class="readmorebox">
-                                <a href="#" class="readmr568">
+                                <a href="{{route('viewFeatures',['slug'=>'feature'])}}" class="readmr568">
                                     <img src="{{asset('images/arrowmore02.png')}}"> READ MORE
                                 </a>
                             </div>

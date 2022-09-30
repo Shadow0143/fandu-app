@@ -9,6 +9,7 @@ use App\Models\PostImage;
 use RealRashid\SweetAlert\Facades\Alert;
 use Image;
 use App\Models\Testimonial;
+use App\Models\Contents;
 
 
 class PostController extends Controller
@@ -74,8 +75,9 @@ class PostController extends Controller
     {
         $post = Post::where('id', $id)->first();
         $postImages = PostImage::where('post_id', $id)->get();
+        $content = Contents::orderBy('id', 'desc')->first();
         $testimonials = Testimonial::orderBy('id', 'desc')->get();
-        return view('postDetail', compact('post', 'postImages', 'testimonials'));
+        return view('postDetail', compact('post', 'postImages', 'testimonials', 'content'));
     }
 
 
@@ -104,7 +106,45 @@ class PostController extends Controller
     public function testimonialDetail($slug, $id)
     {
         $testimonial = Testimonial::where('id', $id)->first();
+        $content = Contents::orderBy('id', 'desc')->first();
         $testimonials = Testimonial::orderBy('id', 'desc')->get();
-        return view('testimonialDetails', compact('testimonial', 'testimonials'));
+        return view('testimonialDetails', compact('testimonial', 'testimonials', 'content'));
+    }
+
+    public function submitContents(Request $request)
+    {
+        // dd($request->all());
+        $content = new Contents();
+        $content->type  =  $request->type;
+        $content->title  =  $request->title;
+        $content->subtitle  =  $request->subtitle;
+        $content->description =  $request->description;
+        $content->save();
+        Alert::success('Success');
+        return back();
+    }
+
+    public function viewFeatures($slug)
+    {
+        $content = Contents::orderBy('id', 'desc')->first();
+
+        $testimonials = Testimonial::orderBy('id', 'desc')->get();
+        $allFeatures = Contents::where('type', $slug)->get();
+        // dd($allFeatures);
+        return view('features', compact('testimonials', 'allFeatures', 'content'));
+    }
+
+    public function readAboutUs()
+    {
+        $content = Contents::orderBy('id', 'desc')->first();
+        $testimonials = Testimonial::orderBy('id', 'desc')->get();
+        return view('aboutme', compact('testimonials', 'content'));
+    }
+
+    public function whyMe()
+    {
+        $content = Contents::orderBy('id', 'desc')->first();
+        $testimonials = Testimonial::orderBy('id', 'desc')->get();
+        return view('whyme', compact('testimonials', 'content'));
     }
 }

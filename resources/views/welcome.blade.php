@@ -100,15 +100,13 @@
 
                             <div class="topbtminfo45">
                                 <p>
-                                    Fandu.me solves the problem of existing personal websites by designing a
-                                    perfectly
-                                    balanced website for your personal information and the content you create.
+                                    A Unique and Balanced Approach
                                 </p>
 
-                                <div class="youcan">Now you can…</div>
+                                <div class="youcan">About Fandu</div>
 
                                 <div class="readmorebox">
-                                    <a href="#" class="readmr568">
+                                    <a href="{{route('readAboutUs')}}" class="readmr568">
                                         <img src="{{asset('images/arrowmore02.png')}}"> READ MORE
                                     </a>
                                 </div>
@@ -122,51 +120,47 @@
                                 <li>
                                     <img src="{{asset('images/flistimg/fl01.png')}}">
                                     <p>
-                                        Creates the perfect balance between personal branding information and all
-                                        the
-                                        content that you create on a regular basis.
+                                        Hassle-free & Seamless Interface
+
                                     </p>
                                 </li>
                                 <li>
                                     <img src="{{asset('images/flistimg/fl02.png')}}">
                                     <p>
-                                        Creates the perfect balance between personal branding information and all
-                                        the
-                                        content that you create on a regular basis.
+                                        A single Repository of all your Content
                                     </p>
                                 </li>
                                 <li>
                                     <img src="{{asset('images/flistimg/fl03.png')}}">
                                     <p>
-                                        Creates the perfect balance between personal branding information and all
-                                        the
-                                        content that you create on a regular basis.
+                                        Effortless Interaction With Your Audience
+
                                     </p>
                                 </li>
 
                                 <li>
                                     <img src="{{asset('images/flistimg/fl04.png')}}">
                                     <p>
-                                        Creates the perfect balance between personal branding information and all
-                                        the
-                                        content that you create on a regular basis.
+                                        Keep Your Website Fresh & Interesting
                                     </p>
                                 </li>
                                 <li>
                                     <img src="{{asset('images/flistimg/fl05.png')}}">
                                     <p>
-                                        Creates the perfect balance between personal branding information and all
-                                        the
-                                        content that you create on a regular basis.
+                                        Affordable & Single Subscription Plan
                                     </p>
                                 </li>
 
                                 <li>
                                     <img src="{{asset('images/flistimg/fl06.png')}}">
                                     <p>
-                                        Creates the perfect balance between personal branding information and all
-                                        the
-                                        content that you create on a regular basis.
+                                        Grow Your Personal Brand on Social Media
+                                    </p>
+                                </li>
+                                <li>
+                                    <img src="{{asset('images/flistimg/fl03.png')}}">
+                                    <p>
+                                        Search Engine Friendly Personal Website
                                     </p>
                                 </li>
 
@@ -176,7 +170,7 @@
 
 
                         <div class="togethersec15">
-                            <a href="#">
+                            <a href="{{route('whyMe')}}">
                                 <span>
                                     Let's think
                                     together.
@@ -205,109 +199,95 @@
                                     <img src="{{asset('images/icon/icon01.png')}}">
                                     <p>
                                         Create a unique identity & digital presence.
+
                                     </p>
                                 </li>
 
                                 <li>
                                     <img src="{{asset('images/icon/icon02.png')}}">
                                     <p>
-                                        Create a unique identity & digital presence.
+                                        Take control of your personal branding.
+
                                     </p>
                                 </li>
 
                                 <li>
                                     <img src="{{asset('images/icon/icon03.png')}}">
                                     <p>
-                                        Create a unique identity & digital presence.
+                                        Showcase your talents & achievements.
+
                                     </p>
                                 </li>
 
                                 <li>
                                     <img src="{{asset('images/icon/icon04.png')}}">
                                     <p>
-                                        Create a unique identity & digital presence.
+                                        Connect better & faster with your audience.
+
                                     </p>
                                 </li>
 
                                 <li>
                                     <img src="{{asset('images/icon/icon05.png')}}">
                                     <p>
-                                        Create a unique identity & digital presence.
+                                        Provide all the information in one place.
+
                                     </p>
                                 </li>
 
                                 <li>
                                     <img src="{{asset('images/icon/icon06.png')}}">
                                     <p>
-                                        Create a unique identity & digital presence.
+                                        Take advantage of SEO, SEM, and online ads.
                                     </p>
                                 </li>
 
                                 <li>
                                     <img src="{{asset('images/icon/icon07.png')}}">
                                     <p>
-                                        Create a unique identity & digital presence.
+                                        Share insights and updates easily & quickly.
                                     </p>
                                 </li>
 
                                 <li>
                                     <img src="{{asset('images/icon/icon08.png')}}">
                                     <p>
-                                        Create a unique identity & digital presence.
+                                        Stand out from the crowd.
                                     </p>
                                 </li>
 
 
-                                <li>
-                                    <img src="{{asset('images/icon/icon08.png')}}">
-                                    <p>
-                                        Create a unique identity & digital presence.
-                                    </p>
-                                </li>
-
-
-                                <li>
-                                    <img src="{{asset('images/icon/icon08.png')}}">
-                                    <p>
-                                        Create a unique identity & digital presence.
-                                    </p>
-                                </li>
                             </ul>
 
                         </div>
 
 
-
+                        @if(!empty($content))
                         <div class="featuresec56">
                             <h2>
-                                Must have Features <br> <span>you need to manage</span> <span> your personal Website
-                                </span>
+                                {{$content->title}}
+
                             </h2>
 
                             <p>
-                                Fandu.me takes personal website development to the next level by catering to your
-                                needs
-                                as well as the needs of your audiences.
+
+                                {{$content->subtitle}}
                             </p>
 
-                            <ul class="featurelist255">
-                                <li>1. DIY Tool with the Perfect Design.</li>
-                                <li>2. Simple, Easy-to-use User Interface.</li>
-                                <li>3. Combine Static Data with New Content. </li>
-                                <li>4. Avail Options Like SSL, Live Chat.</li>
-                                <li>5. Embed Blogs, Social Media, & More.</li>
-                                <li>6. Maintain & Upgrade as Required.</li>
-                            </ul>
+
+                            <div>
+                                {!! $content->description !!}
+                            </div>
 
                             <div class="readmorebox">
-                                <a href="#" class="readmr568">
+                                <a href="{{route('viewFeatures',['slug'=>'feature'])}}" class="readmr568">
                                     <img src="{{asset('images/arrowmore02.png')}}"> READ MORE
                                 </a>
                             </div>
 
 
                         </div>
-
+                        @endif
 
                         <div class="testimonial58">
                             <h2><span>100%</span> Customer Satisfaction, Guaranteed.
@@ -323,7 +303,7 @@
                                             <div class="testmoinfo55">
                                                 <h3>{{$val->auther_name}}</h3>
                                                 <span>{{$val->auther_designation}}</span>
-                                                <p>
+                                                <p id="auther_quotes">
                                                     {!! substr($val->quotes, 0,80) !!} ....
                                                 </p>
 
@@ -376,7 +356,8 @@
     @if(!empty(Auth::user()))
     @if(Auth::user()->role==0)
     <button class="open-button btn btn-outline-primary" onclick="openForm()">Post</button>
-    <button class="open-button btn btn-outline-primary" onclick="opentestimonialForm()">Testimonial</button>
+    <button class="open-button btn btn-outline-warning" onclick="opentestimonialForm()">Testimonial</button>
+    <button class="open-button btn btn-outline-dark" onclick="rightContentForm()">Right Content</button>
     @endif
     @endif
 
@@ -544,6 +525,52 @@
     </div>
 
 
+
+
+    <div class="modal fade pw_modal" id="rightContentForm" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <form action="{{route('submitContents')}}" method="post" enctype="multipart/form-data">
+                    @csrf
+                    <div class="modal-header">
+                        <h4 class="modal-title">Create Contents</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+
+                        <div id="" name="">
+                            <div class="fieldrow">
+                                <select name="type" id="type" class="form-control" required>
+                                    <option value="">Select Type</option>
+                                    <option value="feature">Features</option>
+                                    <option value=""></option>
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                            <div class="fieldrow">
+                                <input type="text" placeholder="Title" name="title" class="form-control" required
+                                    required />
+                            </div>
+                            <div class="fieldrow">
+                                <input type="text" placeholder="Subtitle" name="subtitle" class="form-control" />
+                            </div>
+                            <textarea id="editor3" name="description" class="form-control" required></textarea>
+                        </div>
+
+
+
+                    </div>
+                    <div class="publish_post text-center mb-3 mt-2">
+                        <button class="publish_post btn btn-outline-primary ">Submit</button>
+                    </div>
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+
+
 </section>
 
 @endsection
@@ -554,6 +581,7 @@
 <script>
     CKEDITOR.replace('editor1');
     CKEDITOR.replace('editor2');
+    CKEDITOR.replace('editor3');
 </script>
 
 
@@ -591,6 +619,10 @@
 
     function opentestimonialForm(){
         $('#testimonialmodal').modal('show');
+    }
+
+    function rightContentForm(){
+        $('#rightContentForm').modal('show');
     }
 </script>
 

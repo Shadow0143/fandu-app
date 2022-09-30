@@ -17,35 +17,119 @@
 
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 order-lg-1 order-md-1  order-sm-12 order-12">
-                    <div class="leftsidebar45">
-                        {{-- <div class="testimonblock99">
-                            <figure><img src="{{asset('auther_images')}}/{{$testimonial->auther_image}}">
-                            </figure>
-                            <div class="testmoinfo55">
-                                <h3>{{$testimonial->auther_name}}</h3>
-                                <span>{{$testimonial->auther_designation}}</span>
-                                <p>
-                                    {!! $testimonial->quotes !!}
-                                </p>
+                    <div class="leftsidebar45   mt-5">
 
-                            </div>
-                        </div> --}}
-                        @foreach ($testimonials as $val)
-                        <div class="testimonblock99 card m-2 p-5">
-                            <figure><img src="{{asset('auther_images')}}/{{$val->auther_image}}">
-                            </figure>
-                            <div class="testmoinfo55">
-                                <h3>{{$val->auther_name}}</h3>
-                                <span>{{$val->auther_designation}}</span>
-                                <p>
-                                    {!! $val->quotes !!}
-                                </p>
+                        <p class="mt-5">
 
+                        <div class="aboutme56">
+                            <h2>Why Choose Fandu.me? </h2>
+                            <h5>Fandu.me is your go-to solution for creating amazing personal websites that engage your
+                                audience. It takes personal website development to the next level by catering to your
+                                needs
+                                as well as the needs of your audiences.</h5>
+
+                            <ul class="fndulist456">
+                                <li>
+                                    <img src="{{asset('images/flistimg/fl01.png')}}">
+                                    <p>
+                                        <strong>A Unique and Balanced Approach</strong> <br>
+                                        Fandu.me creates the perfect balance between your brand info and your daily
+                                        content
+                                        updates.?<br>
+                                    </p>
+                                </li>
+                                <li>
+                                    <img src="{{asset('images/flistimg/fl02.png')}}">
+                                    <p>
+                                        <strong> Hassle-free & Seamless Interface</strong> <br>
+                                        Provides an intuitive do-it-yourself interface that is simple, easy, and
+                                        quick.<br>
+                                    </p>
+                                </li>
+                                <li>
+                                    <img src="{{asset('images/flistimg/fl03.png')}}">
+                                    <p>
+                                        <strong> A single Repository of all your Content: </strong> <br>
+                                        Keeps all your content in one place managed in a very efficient way<br>
+
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <img src="{{asset('images/flistimg/fl04.png')}}">
+                                    <p>
+                                        <strong>Effortless Interaction With Your Audience:</strong> <br>
+                                        Fandu.me helps you to interact with your audience seamlessly through an
+                                        impeccable digital
+                                        presence.<br>
+                                    </p>
+                                </li>
+                                <li>
+                                    <img src="{{asset('images/flistimg/fl05.png')}}">
+                                    <p>
+                                        <strong>Keep Your Website Fresh & Interesting:</strong> <br>
+                                        Easily embed blogs, social media feeds, & more on your website without the need
+                                        to learn to
+                                        code.<br>
+                                    </p>
+                                </li>
+
+                                <li>
+                                    <img src="{{asset('images/flistimg/fl06.png')}}">
+                                    <p>
+                                        <strong>Affordable & Single Subscription Plan:</strong> <br>
+                                        Our all-in-one platform meets all your personal branding needs affordably with
+                                        just a single
+                                        subscription.<br>
+                                    </p>
+                                </li>
+                                <li>
+                                    <img src="{{asset('images/flistimg/fl04.png')}}">
+                                    <p>
+                                        <strong>Grow Your Personal Brand on Social Media:</strong> <br>
+                                        Excellent social media connectivity tools that help you to grow your brand via
+                                        digital
+                                        marketing.<br>
+                                    </p>
+                                </li>
+                                <li>
+                                    <img src="{{asset('images/flistimg/fl03.png')}}">
+                                    <p>
+                                        <strong>Search Engine Friendly Personal Website:</strong> <br>
+                                        Top-notch SEO features that you can use to increase your website traffic and
+                                        overall digital
+                                        footprint.
+
+                                    </p>
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+                        </p>
+                        {{-- @foreach ($allFeatures as $key=>$val)
+                        <div class="featuresec56  mt-2 card">
+                            <h2>
+                                {{$val->title}}
+                            </h2>
+                            <p>
+                                {{$val->subtitle}}
+                            </p>
+                            <div>
+                                {!! $val->description !!}
                             </div>
                         </div>
-                        @endforeach
-
-
+                        @endforeach --}}
                     </div>
 
 
@@ -238,7 +322,6 @@
                         </div>
 
 
-
                         <div class="featuresec56">
                             <h2>
                                 {{$content->title}}
@@ -258,7 +341,6 @@
 
 
                         </div>
-
 
                         <div class="testimonial58">
                             <h2><span>100%</span> Customer Satisfaction, Guaranteed.

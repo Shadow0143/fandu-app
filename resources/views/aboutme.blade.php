@@ -17,35 +17,34 @@
 
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 order-lg-1 order-md-1  order-sm-12 order-12">
-                    <div class="leftsidebar45">
-                        {{-- <div class="testimonblock99">
-                            <figure><img src="{{asset('auther_images')}}/{{$testimonial->auther_image}}">
-                            </figure>
-                            <div class="testmoinfo55">
-                                <h3>{{$testimonial->auther_name}}</h3>
-                                <span>{{$testimonial->auther_designation}}</span>
-                                <p>
-                                    {!! $testimonial->quotes !!}
-                                </p>
+                    <div class="leftsidebar45   mt-5">
 
-                            </div>
-                        </div> --}}
-                        @foreach ($testimonials as $val)
-                        <div class="testimonblock99 card m-2 p-5">
-                            <figure><img src="{{asset('auther_images')}}/{{$val->auther_image}}">
-                            </figure>
-                            <div class="testmoinfo55">
-                                <h3>{{$val->auther_name}}</h3>
-                                <span>{{$val->auther_designation}}</span>
-                                <p>
-                                    {!! $val->quotes !!}
-                                </p>
+                        <p class="mt-5">
+                            Fandu.me solves the problem of existing personal websites by designing a perfectly balanced
+                            website for your personal information and the content that you create.<br>
 
+                            Existing DIY website builders available in the market are not suitable for personal
+                            branding. This is because they either focus primarily on profile building or on streaming
+                            new content created by you. However, they can’t do both at the same time.<br>
+
+                            Fandu.me combines the best of both approaches by giving you a unique design to cover both
+                            these aspects. It is a unique personal website creator that innovatively combines your
+                            profile information with any new content you post.<br>
+
+                        </p>
+                        {{-- @foreach ($allFeatures as $key=>$val)
+                        <div class="featuresec56  mt-2 card">
+                            <h2>
+                                {{$val->title}}
+                            </h2>
+                            <p>
+                                {{$val->subtitle}}
+                            </p>
+                            <div>
+                                {!! $val->description !!}
                             </div>
                         </div>
-                        @endforeach
-
-
+                        @endforeach --}}
                     </div>
 
 
@@ -238,7 +237,6 @@
                         </div>
 
 
-
                         <div class="featuresec56">
                             <h2>
                                 {{$content->title}}
@@ -258,7 +256,6 @@
 
 
                         </div>
-
 
                         <div class="testimonial58">
                             <h2><span>100%</span> Customer Satisfaction, Guaranteed.

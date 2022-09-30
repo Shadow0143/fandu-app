@@ -17,35 +17,20 @@
 
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 order-lg-1 order-md-1  order-sm-12 order-12">
-                    <div class="leftsidebar45">
-                        {{-- <div class="testimonblock99">
-                            <figure><img src="{{asset('auther_images')}}/{{$testimonial->auther_image}}">
-                            </figure>
-                            <div class="testmoinfo55">
-                                <h3>{{$testimonial->auther_name}}</h3>
-                                <span>{{$testimonial->auther_designation}}</span>
-                                <p>
-                                    {!! $testimonial->quotes !!}
-                                </p>
-
-                            </div>
-                        </div> --}}
-                        @foreach ($testimonials as $val)
-                        <div class="testimonblock99 card m-2 p-5">
-                            <figure><img src="{{asset('auther_images')}}/{{$val->auther_image}}">
-                            </figure>
-                            <div class="testmoinfo55">
-                                <h3>{{$val->auther_name}}</h3>
-                                <span>{{$val->auther_designation}}</span>
-                                <p>
-                                    {!! $val->quotes !!}
-                                </p>
-
+                    <div class="leftsidebar45   ">
+                        @foreach ($allFeatures as $key=>$val)
+                        <div class="featuresec56  mt-2 card">
+                            <h2>
+                                {{$val->title}}
+                            </h2>
+                            <p>
+                                {{$val->subtitle}}
+                            </p>
+                            <div>
+                                {!! $val->description !!}
                             </div>
                         </div>
                         @endforeach
-
-
                     </div>
 
 
@@ -238,7 +223,6 @@
                         </div>
 
 
-
                         <div class="featuresec56">
                             <h2>
                                 {{$content->title}}
@@ -258,7 +242,6 @@
 
 
                         </div>
-
 
                         <div class="testimonial58">
                             <h2><span>100%</span> Customer Satisfaction, Guaranteed.
