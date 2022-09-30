@@ -18,8 +18,10 @@ class WelcomeController extends Controller
         foreach ($posts as $key => $val) {
             $post_image = PostImage::select('image')->where('post_id', $val->id)->get();
             $posts[$key]->image = $post_image;
-        }
 
+            $posts[$key]->tags = explode(",", $val->tag);
+            $posts[$key]->categories = explode(",", $val->category);
+        }
         $content = Contents::orderBy('id', 'desc')->first();
 
         $testimonials = Testimonial::orderBy('id', 'desc')->get();
